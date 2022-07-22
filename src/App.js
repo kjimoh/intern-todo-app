@@ -35,7 +35,7 @@ function App() {
   };
 
   const handleAddtodo = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && inputValue !== "") {
       const newTodo = inputValue;
       setTodos([
         ...todos,
@@ -48,13 +48,8 @@ function App() {
       setInputValue("");
     }
   };
-  // const handleCheckToggle = (id, state) => {
-  //   const checkTodos = todos;
-  //   checkTodos.map(
-  //     (todo) => todo.id === id(setTodos([...todos, { ...todo, state: !state }]))
-  //   );
-  // };
 
+  const getFiltered = () => {};
   return (
     <div className="App">
       <div className="main">
